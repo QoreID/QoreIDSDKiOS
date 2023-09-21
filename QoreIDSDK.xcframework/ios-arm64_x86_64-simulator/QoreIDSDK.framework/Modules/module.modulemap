@@ -1,0 +1,11 @@
+framework module QoreIDSDK {
+  umbrella header "QoreIDSDk.h"
+
+  export *
+  module * { export * }
+}
+
+module QoreIDSDK.Swift {
+  header "QoreIDSDK-Swift.h"
+  requires objc
+}

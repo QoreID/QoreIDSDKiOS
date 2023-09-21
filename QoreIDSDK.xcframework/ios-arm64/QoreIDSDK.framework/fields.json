@@ -1,0 +1,96 @@
+{
+    "name": "BVN (Basic)",
+    "description": "Verify a Bank Verification Number (BVN) from the Nigeria Inter-Bank Settlement System (NIBSS). This endpoint contains basic demographic information on the identity.",
+    "displayName": "Bank Verification Number (BVN)",
+    "code": "verify_bvn_basic_sub",
+    "status": "active",
+    "productionUrl": "",
+    "sandboxUrl": "",
+    "serviceType": "realtime",
+    "serviceCode": "digital_identity_sub",
+    "price": 12,
+    "currency": "NGN",
+    "countryCode": "NGA",
+    "originalPrice": 12,
+    "originalDollarPrice": 0.04,
+    "dollarPrice": 0.04,
+    "priority": 2,
+    "hasDefaultAccess": false,
+    "fields": [
+        {
+            "code": "idNumber",
+            "name": "Identity Number",
+            "type": "number-string",
+            "label": "ID Number",
+            "status": true,
+            "validationTest": "^([0-9]){11}$",
+            "priority": 0,
+            "isOptional": false,
+            "country": "NGA",
+            "validation": {
+                "length": {
+                    "min": 11,
+                    "max": 11
+                }
+            }
+        }
+    ],
+    "fieldsPriority": [
+        "idNumber"
+    ],
+    "updatedAt": "2023-05-26T17:41:11.000Z",
+    "image": "https://dev-qoremedia.verifynow.ng/v1/asset/logos:bvn.png",
+    "organisationHasAccess": true,
+    "countries": [
+        {
+            "countryCode": "NGA",
+            "countryShortCode": "NG",
+            "countryName": "Nigeria",
+            "active": true,
+            "currency": "NGN",
+            "price": 12
+        }
+    ],
+    "hasActivePromotion": false,
+    "applicantFields": [
+        {
+            "code": "firstname",
+            "type": "string",
+            "name": "First Name",
+            "label": "First Name",
+            "status": true,
+            "priority": 1,
+            "isOptional": false,
+            "validation": {
+                "length": {
+                    "min": 2,
+                    "max": -1
+                }
+            }
+        },
+        {
+            "code": "lastname",
+            "type": "string",
+            "name": "Last Name",
+            "label": "Last Name",
+            "status": true,
+            "priority": 3,
+            "isOptional": false,
+            "validation": {
+                "length": {
+                    "min": 2,
+                    "max": -1
+                }
+            }
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "name": "Phone",
+            "label": "Phone Number",
+            "status": true,
+            "priority": 6,
+            "isOptional": true
+        }
+    ]
+}

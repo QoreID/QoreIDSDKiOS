@@ -1,0 +1,344 @@
+{
+    "name": "Business Address Verification",
+    "description": "Verify the physical address of any business in Nigeria using our last mile agent network.",
+    "displayName": "Business Address",
+    "code": "verify_business_address_sub",
+    "status": "active",
+    "productionUrl": "",
+    "sandboxUrl": "",
+    "serviceType": "lastmile",
+    "serviceCode": "address_sub",
+    "price": 5000,
+    "currency": "NGN",
+    "countryCode": "NGA",
+    "originalPrice": 5000,
+    "originalDollarPrice": 2.6,
+    "dollarPrice": 2.6,
+    "priority": 3,
+    "hasDefaultAccess": true,
+    "fields": [
+        {
+            "code": "businessName",
+            "name": "Business Name",
+            "type": "string",
+            "label": "Business Name",
+            "status": true,
+            "priority": 1,
+            "isOptional": false,
+            "country": "NGA"
+        },
+        {
+            "code": "rcNumber",
+            "name": "RC Number",
+            "type": "number-string",
+            "label": "RC Number",
+            "status": true,
+            "validationTest": "^([0-9]+)$",
+            "priority": 2,
+            "isOptional": true,
+            "country": "NGA",
+            "validation": {
+                "length": {
+                    "min": 5,
+                    "max": -1
+                }
+            }
+        },
+        {
+            "code": "street",
+            "name": "Street",
+            "type": "string",
+            "label": "Street Address",
+            "status": true,
+            "priority": 3,
+            "isOptional": false,
+            "country": "NGA"
+        },
+        {
+            "code": "landmark",
+            "name": "Landmark",
+            "type": "string",
+            "label": "Landmark",
+            "status": true,
+            "priority": 4,
+            "isOptional": true,
+            "country": "NGA"
+        },
+        {
+            "code": "city",
+            "name": "City",
+            "type": "string",
+            "label": "City",
+            "status": true,
+            "priority": 5,
+            "isOptional": false,
+            "country": "NGA"
+        },
+        {
+            "code": "businessType",
+            "name": "Business Type",
+            "type": "string",
+            "label": "Business Type",
+            "status": true,
+            "optionData": {
+                "type": "list",
+                "options": [
+                    {
+                        "value": "Formal",
+                        "label": "Formal"
+                    },
+                    {
+                        "value": "Informal",
+                        "label": "Informal"
+                    }
+                ]
+            },
+            "priority": 0,
+            "isOptional": false,
+            "country": "NGA"
+        },
+        {
+            "code": "lgaName",
+            "name": "LGA Name",
+            "type": "string",
+            "label": "LGA",
+            "status": true,
+            "optionData": {
+                "type": "url",
+                "url": "/v1/sdk/states/{{stateName}}/lgas",
+                "key": "stateName"
+            },
+            "priority": 7,
+            "isOptional": false,
+            "country": "NGA"
+        },
+        {
+            "code": "stateName",
+            "name": "State Name",
+            "type": "string",
+            "label": "State",
+            "status": true,
+            "optionData": {
+                "type": "list",
+                "options": [
+                    {
+                        "value": "abia",
+                        "label": "Abia"
+                    },
+                    {
+                        "value": "adamawa",
+                        "label": "Adamawa"
+                    },
+                    {
+                        "value": "akwaibom",
+                        "label": "Akwa Ibom"
+                    },
+                    {
+                        "value": "anambra",
+                        "label": "Anambra"
+                    },
+                    {
+                        "value": "bauchi",
+                        "label": "Bauchi"
+                    },
+                    {
+                        "value": "bayelsa",
+                        "label": "Bayelsa"
+                    },
+                    {
+                        "value": "benue",
+                        "label": "Benue"
+                    },
+                    {
+                        "value": "borno",
+                        "label": "Borno"
+                    },
+                    {
+                        "value": "crossriver",
+                        "label": "Cross River"
+                    },
+                    {
+                        "value": "delta",
+                        "label": "Delta"
+                    },
+                    {
+                        "value": "ebonyi",
+                        "label": "Ebonyi"
+                    },
+                    {
+                        "value": "edo",
+                        "label": "Edo"
+                    },
+                    {
+                        "value": "ekiti",
+                        "label": "Ekiti"
+                    },
+                    {
+                        "value": "enugu",
+                        "label": "Enugu"
+                    },
+                    {
+                        "value": "fct",
+                        "label": "FCT"
+                    },
+                    {
+                        "value": "gombe",
+                        "label": "Gombe"
+                    },
+                    {
+                        "value": "imo",
+                        "label": "Imo"
+                    },
+                    {
+                        "value": "jigawa",
+                        "label": "Jigawa"
+                    },
+                    {
+                        "value": "kaduna",
+                        "label": "Kaduna"
+                    },
+                    {
+                        "value": "kano",
+                        "label": "Kano"
+                    },
+                    {
+                        "value": "katsina",
+                        "label": "Katsina"
+                    },
+                    {
+                        "value": "kebbi",
+                        "label": "Kebbi"
+                    },
+                    {
+                        "value": "kogi",
+                        "label": "Kogi"
+                    },
+                    {
+                        "value": "kwara",
+                        "label": "Kwara"
+                    },
+                    {
+                        "value": "lagos",
+                        "label": "Lagos"
+                    },
+                    {
+                        "value": "nasarawa",
+                        "label": "Nasarawa"
+                    },
+                    {
+                        "value": "niger",
+                        "label": "Niger"
+                    },
+                    {
+                        "value": "ogun",
+                        "label": "Ogun"
+                    },
+                    {
+                        "value": "ondo",
+                        "label": "Ondo"
+                    },
+                    {
+                        "value": "osun",
+                        "label": "Osun"
+                    },
+                    {
+                        "value": "oyo",
+                        "label": "Oyo"
+                    },
+                    {
+                        "value": "plateau",
+                        "label": "Plateau"
+                    },
+                    {
+                        "value": "rivers",
+                        "label": "Rivers"
+                    },
+                    {
+                        "value": "sokoto",
+                        "label": "Sokoto"
+                    },
+                    {
+                        "value": "taraba",
+                        "label": "Taraba"
+                    },
+                    {
+                        "value": "yobe",
+                        "label": "Yobe"
+                    },
+                    {
+                        "value": "zamfara",
+                        "label": "Zamfara"
+                    }
+                ]
+            },
+            "priority": 6,
+            "isOptional": false,
+            "country": "NGA"
+        }
+    ],
+    "fieldsPriority": [
+        "businessType",
+        "businessName",
+        "rcNumber",
+        "street",
+        "landmark",
+        "city",
+        "stateName",
+        "lgaName"
+    ],
+    "updatedAt": "2023-05-30T06:22:18.000Z",
+    "image": "https://dev-qoremedia.verifynow.ng/v1/asset/logos:address.png",
+    "organisationHasAccess": true,
+    "countries": [
+        {
+            "countryCode": "NGA",
+            "countryShortCode": "NG",
+            "countryName": "Nigeria",
+            "active": true,
+            "currency": "NGN",
+            "price": 5000
+        }
+    ],
+    "hasActivePromotion": false,
+    "applicantFields": [
+        {
+            "code": "firstname",
+            "type": "string",
+            "name": "First Name",
+            "label": "First Name",
+            "status": true,
+            "priority": 1,
+            "isOptional": false,
+            "validation": {
+                "length": {
+                    "min": 2,
+                    "max": -1
+                }
+            }
+        },
+        {
+            "code": "lastname",
+            "type": "string",
+            "name": "Last Name",
+            "label": "Last Name",
+            "status": true,
+            "priority": 3,
+            "isOptional": false,
+            "validation": {
+                "length": {
+                    "min": 2,
+                    "max": -1
+                }
+            }
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "name": "Phone",
+            "label": "Phone Number",
+            "status": true,
+            "priority": 6,
+            "isOptional": false
+        }
+    ]
+}
