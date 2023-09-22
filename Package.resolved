@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "qoreidsdkiosdependencies",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/QoreID/QoreIDSDKiOSDependencies.git",
+      "state" : {
+        "revision" : "be7e0464f363b57f3a72d54ad8e687df0efd636c",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
