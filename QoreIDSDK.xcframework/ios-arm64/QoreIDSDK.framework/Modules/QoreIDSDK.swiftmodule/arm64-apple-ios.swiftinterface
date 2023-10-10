@@ -175,10 +175,6 @@ public struct MetadataPhoneNumberFormat : Swift.Decodable {
   public let nationalPrefixOptionalWhenFormatting: Swift.Bool?
   public let domesticCarrierCodeFormattingRule: Swift.String?
 }
-public struct VendorSessionConfig {
-}
-public struct VendorSessionConfigQoreId {
-}
 extension CoreFoundation.CGFloat {
   public static let cornerRadius05x: CoreFoundation.CGFloat
   public static let cornerRadius1x: CoreFoundation.CGFloat
@@ -385,7 +381,7 @@ public enum SheetSize {
 }
 public struct QoreIdSdk {
   public static let shared: QoreIDSDK.QoreIdSdk
-  public func launch(param: QoreIDSDK.QoreIDParam, vc: UIKit.UIViewController, onResult: ((any QoreIDSDK.QoreIDResult) -> ())?)
+  public func launch(param: QoreIDSDK.QoreIDParam, vc: UIKit.UIViewController, _ source: Swift.String = "", onResult: ((any QoreIDSDK.QoreIDResult) -> ())?)
 }
 @_hasMissingDesignatedInitializers final public class PartialFormatter {
   convenience public init(phoneNumberKit: QoreIDSDK.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
