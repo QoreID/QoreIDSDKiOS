@@ -1,7 +1,7 @@
 framework module QoreIDSDK {
   umbrella header "QoreIDSDk.h"
-
   export *
+
   module * { export * }
 }
 

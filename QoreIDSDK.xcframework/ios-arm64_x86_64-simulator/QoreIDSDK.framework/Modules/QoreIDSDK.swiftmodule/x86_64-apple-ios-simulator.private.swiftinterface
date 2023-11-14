@@ -1,9 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QoreIDSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
-import BackgroundTasks
 import CommonCrypto
 import Contacts
 import CoreImage
@@ -11,6 +10,7 @@ import CoreLocation
 import CoreMotion
 import FaceTecSDK
 import Foundation
+import HealthKit
 import ImageIO
 import MapKit
 import MobileCoreServices
@@ -25,6 +25,7 @@ import UIKit
 import UserNotifications
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public typealias MetadataCallback = (() throws -> Foundation.Data?)
 @objc final public class PhoneNumberKit : ObjectiveC.NSObject {
   public init(metadataCallback: @escaping QoreIDSDK.MetadataCallback = PhoneNumberKit.defaultMetadataCallback)
@@ -287,6 +288,7 @@ public class QoreIDParam {
   public func inputData(_ inputData: QoreIDSDK.InputData?) -> QoreIDSDK.QoreIDParam
   public func collection(_ productCode: Swift.String) -> QoreIDSDK.QoreIDParam
   public func workFlow(_ workflowId: Swift.Int) -> QoreIDSDK.QoreIDParam
+  public func workFlowRequiredIdentity(_ identity: Swift.String) -> QoreIDSDK.QoreIDParam
   public func ocrAcceptedDocuments(_ ocrAcceptedDocuments: Swift.Array<Swift.String>?) -> QoreIDSDK.QoreIDParam
   public func build() -> QoreIDSDK.QoreIDParam
   @objc deinit
@@ -347,6 +349,20 @@ public class Country {
   @objc deinit
 }
 public struct ResultData {
+  public var customerReference: Swift.String?
+  public var flowId: Swift.Int?
+  public var verification: QoreIDSDK.VerificationResult?
+  public var productCode: Swift.String
+}
+public struct VerificationResult {
+  public let id: Swift.Int?
+  public let customerReference: Swift.String?
+  public let applicant: QoreIDSDK.ApplicantData?
+  public let status: QoreIDSDK.VerifResponseStatusObj?
+}
+public struct VerifResponseStatusObj {
+  public var status: Swift.String?
+  public var state: Swift.String?
 }
 public enum ErrorCode {
   case E_GENERAL
@@ -382,6 +398,7 @@ public enum SheetSize {
 public struct QoreIdSdk {
   public static let shared: QoreIDSDK.QoreIdSdk
   public func launch(param: QoreIDSDK.QoreIDParam, vc: UIKit.UIViewController, _ source: Swift.String = "", onResult: ((any QoreIDSDK.QoreIDResult) -> ())?)
+  public func continueVerifindTracking()
 }
 @_hasMissingDesignatedInitializers final public class PartialFormatter {
   convenience public init(phoneNumberKit: QoreIDSDK.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
