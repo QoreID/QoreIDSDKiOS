@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QoreIDSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name QoreIDSDK
 import AVFoundation
 import CommonCrypto
 import Contacts
@@ -293,7 +292,7 @@ public class QoreIDParam {
   @objc deinit
 }
 public struct InputData {
-  public init(applicant: QoreIDSDK.ApplicantData? = nil, address: QoreIDSDK.AddressData? = nil, identity: QoreIDSDK.IdentityData? = nil)
+  public init(applicant: QoreIDSDK.ApplicantData? = nil, address: QoreIDSDK.AddressData? = nil, identity: QoreIDSDK.IdentityData? = nil, extraData: QoreIDSDK.VerificationExtraData? = nil)
 }
 public class ApplicantData {
   public init(firstname: Swift.String? = nil, lastname: Swift.String? = nil, phone: Swift.String? = nil, middlename: Swift.String? = nil, dob: Swift.String? = nil, email: Swift.String? = nil, gender: Swift.String? = nil, idType: Swift.String? = nil, idNumber: Swift.String? = nil, phoneCountryCode: Swift.String? = nil)
@@ -304,6 +303,10 @@ public struct AddressData {
 }
 public struct IdentityData {
   public init(idType: Swift.String? = nil, idNumber: Swift.String? = nil)
+}
+public class VerificationExtraData {
+  public init(organisationId: Swift.String? = nil, organisationName: Swift.String? = nil, requestSource: Swift.String? = nil, internalReferenceId: Swift.String? = nil)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class DefaultsKey {
   @objc deinit
