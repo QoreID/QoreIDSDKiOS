@@ -1,6 +1,6 @@
 # QoreIDSDK
 
-**QoreIDSDK iOS ** is the official iOS SDK for QOREID verification services, owned by VerifyMe.
+QoreIDSDK iOS is the official iOS SDK for QOREID verification services, owned by VerifyMe.
 
 ## Installation
 
