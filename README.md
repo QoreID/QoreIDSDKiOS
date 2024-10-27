@@ -19,7 +19,7 @@ To install the QoreID SDK in your iOS project, use CocoaPods:
    ```ruby
    pod install
 
-## Option 2
+### Option 2
 
 You can also install the SDK using Swift Package Manager (SPM):
 
