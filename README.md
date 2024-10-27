@@ -25,7 +25,7 @@ Importing the SDK
 After installation, import the SDK in your code:
 
 Swift
-  ```swift
+  ```ruby
    import QoreIDSDK
 
 
