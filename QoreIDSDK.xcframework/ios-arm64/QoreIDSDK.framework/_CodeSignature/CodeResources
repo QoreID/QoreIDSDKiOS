@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QoreIDSDK-Swift.h</key>
 		<data>
-		4xt1hx9Yia3eGFS3yDvvmlGW3tQ=
+		PriroBE0e749+kP/6WL6k5pf/LE=
 		</data>
 		<key>Headers/QoreIDSDk.h</key>
 		<data>
@@ -62,27 +62,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eqixIcnmZ3txt4PJt7Y/+x+q0M0=
+		SaQly4eOvlcr4aG4lFx5IOCSCo8=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Yyd4ZT86ZuZFYyobGTVYG8Gq1Eo=
+		8J7siwgoLQYdQTDJw1E9BYGDlaU=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		6eMRVwI3o2oHZ9tT96VGaQuQzfQ=
+		Hz+too6FdYttJ5Xn4CeW8VDl4fs=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		sO+47Ya13dKPbtQnmN3LXDAAZac=
+		Qv4vtRIL+iuqzAhik5uiA4U2kmo=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		6eMRVwI3o2oHZ9tT96VGaQuQzfQ=
+		Hz+too6FdYttJ5Xn4CeW8VDl4fs=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iKCcaQagE7l/fli3SceAdDHkjmY=
+		iQcLWDMWoERcMitZsk4ysqI7P5c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -239,7 +239,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C1j12XQ7P4o6GigUWSYtmp94hVPi6NXyvX8SyML8lks=
+			mD/PWxXSjA1mftwEbgTWGr/2Gi4vXJqB48ItRU0RZz0=
 			</data>
 		</dict>
 		<key>Headers/QoreIDSDk.h</key>
@@ -337,35 +337,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OyWdRehR87XUWzVjyMGQWrYqN6iMCxDuXO9AC1vdwQo=
+			TIQmiecbd5mLcQRSukk4LJpnq2XM4hBUS+6H2Myp/W4=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUoHTkNHiD2CzreWzedm+W1BiH5l0LyJm63G4kuIMf8=
+			3YXP6NGUGd+R5ARlf8wOaWMsBi5FyNh9jx3vRVUbIKw=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+olPAsf2pdKay3ZURCDZQtWCxrxNFoYZCgOUhMa1E3w=
+			ryPHP9bHrPNZbqIOQuga0NjzIhPFEfEPdtc8vc+EPi4=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUoHTkNHiD2CzreWzedm+W1BiH5l0LyJm63G4kuIMf8=
+			3YXP6NGUGd+R5ARlf8wOaWMsBi5FyNh9jx3vRVUbIKw=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5P7OsgxFSsoChIrvmFPl7Q/3yw+PeenBWZQ9HZ28GbQ=
+			TO38vqKDTYpKZ187LYwxC8SjIXUzlrlKoJ0GL3+6t9Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

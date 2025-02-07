@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name QoreIDSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name QoreIDSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import CommonCrypto
 import Contacts
@@ -293,7 +293,7 @@ public class QoreIDParam {
   @objc deinit
 }
 public struct InputData {
-  public init(applicant: QoreIDSDK.ApplicantData? = nil, address: QoreIDSDK.AddressData? = nil, identity: QoreIDSDK.IdentityData? = nil)
+  public init(applicant: QoreIDSDK.ApplicantData? = nil, address: QoreIDSDK.AddressData? = nil, identity: QoreIDSDK.IdentityData? = nil, extraData: QoreIDSDK.VerificationExtraData? = nil)
 }
 public class ApplicantData {
   public init(firstname: Swift.String? = nil, lastname: Swift.String? = nil, phone: Swift.String? = nil, middlename: Swift.String? = nil, dob: Swift.String? = nil, email: Swift.String? = nil, gender: Swift.String? = nil, idType: Swift.String? = nil, idNumber: Swift.String? = nil, phoneCountryCode: Swift.String? = nil)
@@ -304,6 +304,10 @@ public struct AddressData {
 }
 public struct IdentityData {
   public init(idType: Swift.String? = nil, idNumber: Swift.String? = nil)
+}
+public class VerificationExtraData {
+  public init(organisationId: Swift.String? = nil, organisationName: Swift.String? = nil, requestSource: Swift.String? = nil, internalReferenceId: Swift.String? = nil)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class DefaultsKey {
   @objc deinit
@@ -535,15 +539,15 @@ extension QoreIDSDK.MetadataPhoneNumberFormat {
   public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public func setUpButton(text: Swift.String = "", font: UIKit.UIFont = .systemFont14Regular, color: UIKit.UIColor = .white, cornerRadius: CoreFoundation.CGFloat = 10)
+  @_Concurrency.MainActor @preconcurrency public func setUpButton(text: Swift.String = "", font: UIKit.UIFont = .systemFont14Regular, color: UIKit.UIColor = .white, cornerRadius: CoreFoundation.CGFloat = 10)
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func setUpView(bgColor: UIKit.UIColor = .clear, cornerRadius: CoreFoundation.CGFloat = 0.0)
+  @_Concurrency.MainActor @preconcurrency public func setUpView(bgColor: UIKit.UIColor = .clear, cornerRadius: CoreFoundation.CGFloat = 0.0)
 }
 extension UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public func setUpNormalTextField(_ prop: QoreIDSDK.TextFieldProps)
-  @_Concurrency.MainActor(unsafe) public func setLeftPaddingPoints(_ amount: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func setRightPaddingPoints(_ amount: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func setUpNormalTextField(_ prop: QoreIDSDK.TextFieldProps)
+  @_Concurrency.MainActor @preconcurrency public func setLeftPaddingPoints(_ amount: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func setRightPaddingPoints(_ amount: CoreFoundation.CGFloat)
 }
 public struct TextFieldProps {
   public let placeholderString: Swift.String
@@ -557,11 +561,11 @@ public struct TextFieldProps {
   public let cornerRadius: CoreFoundation.CGFloat
 }
 extension UIKit.UILabel {
-  @_Concurrency.MainActor(unsafe) public func setUpGenLabel(text: Swift.String, textColor: UIKit.UIColor = UIColor.textColor, font: UIKit.UIFont, numberOfLines: Swift.Int = 1, textAlignment: UIKit.NSTextAlignment = .left)
+  @_Concurrency.MainActor @preconcurrency public func setUpGenLabel(text: Swift.String, textColor: UIKit.UIColor = UIColor.textColor, font: UIKit.UIFont, numberOfLines: Swift.Int = 1, textAlignment: UIKit.NSTextAlignment = .left)
 }
 extension UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public func simpleAlert(alertType: UIKit.UIAlertController.Style? = .alert, title: Swift.String?, message: Swift.String = "", action: (() -> ())? = nil)
-  @_Concurrency.MainActor(unsafe) public func setUpNavigationTitle(_ title: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func simpleAlert(alertType: UIKit.UIAlertController.Style? = .alert, title: Swift.String?, message: Swift.String = "", action: (() -> ())? = nil)
+  @_Concurrency.MainActor @preconcurrency public func setUpNavigationTitle(_ title: Swift.String?)
 }
 public enum CameraState {
   case ready, accessDenied, noDeviceFound, notDetermined
@@ -624,125 +628,131 @@ public enum CaptureError : Swift.Error {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CameraManager : ObjectiveC.NSObject, AVFoundation.AVCaptureFileOutputRecordingDelegate, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) open var imageAlbumName: Swift.String?
-  @_Concurrency.MainActor(unsafe) open var videoAlbumName: Swift.String?
-  @_Concurrency.MainActor(unsafe) open var captureSession: AVFoundation.AVCaptureSession?
-  @_Concurrency.MainActor(unsafe) open var showErrorsToUsers: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var showAccessPermissionPopupAutomatically: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var showErrorBlock: (_ erTitle: Swift.String, _ erMessage: Swift.String) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) open func canSetPreset(preset: AVFoundation.AVCaptureSession.Preset) -> Swift.Bool?
-  @_Concurrency.MainActor(unsafe) open var writeFilesToPhoneLibrary: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var shouldRespondToOrientationChanges: Swift.Bool {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CameraManager : ObjectiveC.NSObject, AVFoundation.AVCaptureFileOutputRecordingDelegate, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency open var imageAlbumName: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var videoAlbumName: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var captureSession: AVFoundation.AVCaptureSession?
+  @_Concurrency.MainActor @preconcurrency open var showErrorsToUsers: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var showAccessPermissionPopupAutomatically: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var showErrorBlock: (_ erTitle: Swift.String, _ erMessage: Swift.String) -> Swift.Void
+  @_Concurrency.MainActor @preconcurrency open func canSetPreset(preset: AVFoundation.AVCaptureSession.Preset) -> Swift.Bool?
+  @_Concurrency.MainActor @preconcurrency open var writeFilesToPhoneLibrary: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var shouldRespondToOrientationChanges: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var shouldFlipFrontCameraImage: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var shouldKeepViewAtOrientationChanges: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var shouldEnableTapToFocus: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency open var shouldFlipFrontCameraImage: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var shouldKeepViewAtOrientationChanges: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var shouldEnableTapToFocus: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var shouldEnablePinchToZoom: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency open var shouldEnablePinchToZoom: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var shouldEnableExposure: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency open var shouldEnableExposure: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var cameraIsReady: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency open var cameraIsReady: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) open var hasFrontCamera: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var hasFlash: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var animateCameraDeviceChange: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var animateShutter: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var shouldUseLocationServices: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var cameraDevice: QoreIDSDK.CameraDevice {
+  @_Concurrency.MainActor @preconcurrency open var hasFrontCamera: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var hasFlash: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var animateCameraDeviceChange: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var animateShutter: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var shouldUseLocationServices: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var flashMode: QoreIDSDK.CameraFlashMode {
+  @_Concurrency.MainActor @preconcurrency open var cameraDevice: QoreIDSDK.CameraDevice {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var cameraOutputQuality: AVFoundation.AVCaptureSession.Preset {
+  @_Concurrency.MainActor @preconcurrency open var flashMode: QoreIDSDK.CameraFlashMode {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var cameraOutputMode: QoreIDSDK.CameraOutputMode {
+  @_Concurrency.MainActor @preconcurrency open var cameraOutputQuality: AVFoundation.AVCaptureSession.Preset {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var recordedDuration: CoreMedia.CMTime {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open var recordedFileSize: Swift.Int64 {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open var focusMode: AVFoundation.AVCaptureDevice.FocusMode
-  @_Concurrency.MainActor(unsafe) open var exposureMode: AVFoundation.AVCaptureDevice.ExposureMode
-  @_Concurrency.MainActor(unsafe) open var videoStabilisationMode: AVFoundation.AVCaptureVideoStabilizationMode {
+  @_Concurrency.MainActor @preconcurrency open var cameraOutputMode: QoreIDSDK.CameraOutputMode {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) open var activeVideoStabilisationMode: AVFoundation.AVCaptureVideoStabilizationMode {
+  @_Concurrency.MainActor @preconcurrency open var recordedDuration: CoreMedia.CMTime {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var recordedFileSize: Swift.Int64 {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var focusMode: AVFoundation.AVCaptureDevice.FocusMode
+  @_Concurrency.MainActor @preconcurrency open var exposureMode: AVFoundation.AVCaptureDevice.ExposureMode
+  @_Concurrency.MainActor @preconcurrency open var videoStabilisationMode: AVFoundation.AVCaptureVideoStabilizationMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var activeVideoStabilisationMode: AVFoundation.AVCaptureVideoStabilizationMode {
     get
   }
   @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addPreviewLayerToView(_ view: UIKit.UIView) -> QoreIDSDK.CameraState
+  @_Concurrency.MainActor @preconcurrency open func addPreviewLayerToView(_ view: UIKit.UIView) -> QoreIDSDK.CameraState
   @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addPreviewLayerToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode) -> QoreIDSDK.CameraState
+  @_Concurrency.MainActor @preconcurrency open func addPreviewLayerToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode) -> QoreIDSDK.CameraState
   @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addLayerPreviewToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode, completion: (() -> Swift.Void)?) -> QoreIDSDK.CameraState
-  @_Concurrency.MainActor(unsafe) open func zoom(_ scale: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) open func askUserForCameraPermission(_ completion: @escaping (Swift.Bool) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) open func stopCaptureSession()
-  @_Concurrency.MainActor(unsafe) open func resumeCaptureSession()
-  @_Concurrency.MainActor(unsafe) open func stopAndRemoveCaptureSession()
+  @_Concurrency.MainActor @preconcurrency open func addLayerPreviewToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode, completion: (() -> Swift.Void)?) -> QoreIDSDK.CameraState
+  @_Concurrency.MainActor @preconcurrency open func zoom(_ scale: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func askUserForCameraPermission(_ completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func stopCaptureSession()
+  @_Concurrency.MainActor @preconcurrency open func resumeCaptureSession()
+  @_Concurrency.MainActor @preconcurrency open func stopAndRemoveCaptureSession()
   @available(*, deprecated)
-  @_Concurrency.MainActor(unsafe) open func capturePictureWithCompletion(_ imageCompletion: @escaping (UIKit.UIImage?, Foundation.NSError?) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) open func capturePictureWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func capturePictureWithCompletion(_ imageCompletion: @escaping (UIKit.UIImage?, Foundation.NSError?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func capturePictureWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
   @available(*, deprecated)
-  @_Concurrency.MainActor(unsafe) open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) open func startRecordingVideo()
-  @_Concurrency.MainActor(unsafe) open func stopVideoRecording(_ completion: ((_ videoURL: Foundation.URL?, _ error: Foundation.NSError?) -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency open func startRecordingVideo()
+  @_Concurrency.MainActor @preconcurrency open func stopVideoRecording(_ completion: ((_ videoURL: Foundation.URL?, _ error: Foundation.NSError?) -> Swift.Void)?)
   public typealias QRCodeDetectionHandler = (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) open func startQRCodeDetection(_ handler: @escaping QoreIDSDK.CameraManager.QRCodeDetectionHandler)
-  @_Concurrency.MainActor(unsafe) open func stopQRCodeDetection()
-  @_Concurrency.MainActor(unsafe) open func deviceOrientationMatchesInterfaceOrientation() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) open func currentCameraStatus() -> QoreIDSDK.CameraState
-  @_Concurrency.MainActor(unsafe) open func changeFlashMode() -> QoreIDSDK.CameraFlashMode
-  @_Concurrency.MainActor(unsafe) open func hasFlash(for cameraDevice: QoreIDSDK.CameraDevice) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc public func fileOutput(_: AVFoundation.AVCaptureFileOutput, didStartRecordingTo _: Foundation.URL, from _: [AVFoundation.AVCaptureConnection])
-  @_Concurrency.MainActor(unsafe) @objc open func fileOutput(_: AVFoundation.AVCaptureFileOutput, didFinishRecordingTo outputFileURL: Foundation.URL, from _: [AVFoundation.AVCaptureConnection], error: (any Swift.Error)?)
-  @_Concurrency.MainActor(unsafe) @objc open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) open func resetOrientation()
-  @_Concurrency.MainActor(unsafe) open func _doFlipAnimation()
+  @_Concurrency.MainActor @preconcurrency open func startQRCodeDetection(_ handler: @escaping QoreIDSDK.CameraManager.QRCodeDetectionHandler)
+  @_Concurrency.MainActor @preconcurrency open func stopQRCodeDetection()
+  @_Concurrency.MainActor @preconcurrency open func deviceOrientationMatchesInterfaceOrientation() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open func currentCameraStatus() -> QoreIDSDK.CameraState
+  @_Concurrency.MainActor @preconcurrency open func changeFlashMode() -> QoreIDSDK.CameraFlashMode
+  @_Concurrency.MainActor @preconcurrency open func hasFlash(for cameraDevice: QoreIDSDK.CameraDevice) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc public func fileOutput(_: AVFoundation.AVCaptureFileOutput, didStartRecordingTo _: Foundation.URL, from _: [AVFoundation.AVCaptureConnection])
+  @_Concurrency.MainActor @preconcurrency @objc open func fileOutput(_: AVFoundation.AVCaptureFileOutput, didFinishRecordingTo outputFileURL: Foundation.URL, from _: [AVFoundation.AVCaptureConnection], error: (any Swift.Error)?)
+  @_Concurrency.MainActor @preconcurrency @objc open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open func resetOrientation()
+  @_Concurrency.MainActor @preconcurrency open func _doFlipAnimation()
   @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CameraLocationManager : ObjectiveC.NSObject, CoreLocation.CLLocationManagerDelegate {
     @objc public func locationManager(_: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
     @objc public func locationManager(_: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
     @objc deinit
   }
   @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
 }
 extension QoreIDSDK.CameraManager : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func metadataOutput(_: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from _: AVFoundation.AVCaptureConnection)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func metadataOutput(_: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from _: AVFoundation.AVCaptureConnection)
 }
 extension Foundation.Data {
   public func printExifData()
   public func limitDataSize(to maxSizeInKB: Swift.Int) -> Foundation.Data?
   public func resizeImage(to maxSize: CoreFoundation.CGSize) -> Foundation.Data?
 }
+#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional {
   public func or(other: Wrapped) -> Wrapped
 }
+#else
+extension Swift.Optional {
+  public func or(other: Wrapped) -> Wrapped
+}
+#endif
 public enum NotificationName : Swift.String {
   case IHProgressHUDDidReceiveTouchEvent, IHProgressHUDDidTouchDownInside, IHProgressHUDWillDisappear, IHProgressHUDDidDisappear, IHProgressHUDWillAppear, IHProgressHUDDidAppear, IHProgressHUDStatusUserInfoKey
   public func getNotificationName() -> Foundation.Notification.Name
@@ -783,57 +793,57 @@ public enum IHProgressHUDAnimationType : Swift.Int {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IHProgressHUD : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class IHProgressHUD : UIKit.UIView {
   @objc deinit
 }
 extension QoreIDSDK.IHProgressHUD {
-  @_Concurrency.MainActor(unsafe) public class func set(defaultStyle style: QoreIDSDK.IHProgressHUDStyle)
-  @_Concurrency.MainActor(unsafe) public class func setHUD(backgroundColor color: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public class func set(defaultMaskType maskType: QoreIDSDK.IHProgressHUDMaskType)
-  @_Concurrency.MainActor(unsafe) public class func set(defaultAnimationType type: QoreIDSDK.IHProgressHUDAnimationType)
-  @_Concurrency.MainActor(unsafe) public class func set(status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func set(containerView: UIKit.UIView?)
-  @_Concurrency.MainActor(unsafe) public class func set(minimumSize: CoreFoundation.CGSize)
-  @_Concurrency.MainActor(unsafe) public class func set(ringThickness: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func set(ringRadius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func setRing(noTextRingRadius radius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func set(cornerRadius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func set(borderColor color: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public class func set(borderWidth width: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func set(font: UIKit.UIFont)
-  @_Concurrency.MainActor(unsafe) public class func set(foregroundColor color: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public class func set(backgroundColor color: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public class func set(backgroundLayerColor color: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public class func set(imageViewSize size: CoreFoundation.CGSize)
-  @_Concurrency.MainActor(unsafe) public class func set(shouldTintImages: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public class func set(infoImage image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public class func setSuccessImage(successImage image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public class func setErrorImage(errorImage image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) public class func set(viewForExtension view: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public class func set(graceTimeInterval interval: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func set(minimumDismiss interval: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func set(maximumDismissTimeInterval interval: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func setFadeInAnimationDuration(fadeInAnimationDuration duration: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func setFadeOutAnimationDuration(fadeOutAnimationDuration duration: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func setMaxSupportedWindowLevel(maxSupportedWindowLevel windowLevel: UIKit.UIWindow.Level)
-  @_Concurrency.MainActor(unsafe) public class func setHapticsEnabled(hapticsEnabled: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public class func show()
-  @_Concurrency.MainActor(unsafe) public class func show(withStatus status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func show(progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public class func show(progress: CoreFoundation.CGFloat, status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func setOffsetFromCenter(_ offset: UIKit.UIOffset)
-  @_Concurrency.MainActor(unsafe) public class func resetOffsetFromCenter()
-  @_Concurrency.MainActor(unsafe) public class func popActivity()
-  @_Concurrency.MainActor(unsafe) public class func dismiss()
-  @_Concurrency.MainActor(unsafe) public class func dismissWithCompletion(_ completion: (() -> Swift.Void)?)
-  @_Concurrency.MainActor(unsafe) public class func dismissWithDelay(_ delay: Foundation.TimeInterval)
-  @_Concurrency.MainActor(unsafe) public class func dismissWithDelay(_ delay: Foundation.TimeInterval, completion: (() -> Swift.Void)?)
-  @_Concurrency.MainActor(unsafe) public class func isVisible() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public class func displayDurationForString(_ string: Swift.String?) -> Foundation.TimeInterval
-  @_Concurrency.MainActor(unsafe) public class func showInfowithStatus(_ status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func showImage(_ image: UIKit.UIImage, status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func showSuccesswithStatus(_ status: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public class func showError(withStatus status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func set(defaultStyle style: QoreIDSDK.IHProgressHUDStyle)
+  @_Concurrency.MainActor @preconcurrency public class func setHUD(backgroundColor color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public class func set(defaultMaskType maskType: QoreIDSDK.IHProgressHUDMaskType)
+  @_Concurrency.MainActor @preconcurrency public class func set(defaultAnimationType type: QoreIDSDK.IHProgressHUDAnimationType)
+  @_Concurrency.MainActor @preconcurrency public class func set(status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func set(containerView: UIKit.UIView?)
+  @_Concurrency.MainActor @preconcurrency public class func set(minimumSize: CoreFoundation.CGSize)
+  @_Concurrency.MainActor @preconcurrency public class func set(ringThickness: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func set(ringRadius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func setRing(noTextRingRadius radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func set(cornerRadius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func set(borderColor color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public class func set(borderWidth width: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func set(font: UIKit.UIFont)
+  @_Concurrency.MainActor @preconcurrency public class func set(foregroundColor color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public class func set(backgroundColor color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public class func set(backgroundLayerColor color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public class func set(imageViewSize size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor @preconcurrency public class func set(shouldTintImages: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public class func set(infoImage image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public class func setSuccessImage(successImage image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public class func setErrorImage(errorImage image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public class func set(viewForExtension view: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public class func set(graceTimeInterval interval: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func set(minimumDismiss interval: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func set(maximumDismissTimeInterval interval: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func setFadeInAnimationDuration(fadeInAnimationDuration duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func setFadeOutAnimationDuration(fadeOutAnimationDuration duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func setMaxSupportedWindowLevel(maxSupportedWindowLevel windowLevel: UIKit.UIWindow.Level)
+  @_Concurrency.MainActor @preconcurrency public class func setHapticsEnabled(hapticsEnabled: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public class func show()
+  @_Concurrency.MainActor @preconcurrency public class func show(withStatus status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func show(progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public class func show(progress: CoreFoundation.CGFloat, status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func setOffsetFromCenter(_ offset: UIKit.UIOffset)
+  @_Concurrency.MainActor @preconcurrency public class func resetOffsetFromCenter()
+  @_Concurrency.MainActor @preconcurrency public class func popActivity()
+  @_Concurrency.MainActor @preconcurrency public class func dismiss()
+  @_Concurrency.MainActor @preconcurrency public class func dismissWithCompletion(_ completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency public class func dismissWithDelay(_ delay: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public class func dismissWithDelay(_ delay: Foundation.TimeInterval, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency public class func isVisible() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public class func displayDurationForString(_ string: Swift.String?) -> Foundation.TimeInterval
+  @_Concurrency.MainActor @preconcurrency public class func showInfowithStatus(_ status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func showImage(_ image: UIKit.UIImage, status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func showSuccesswithStatus(_ status: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public class func showError(withStatus status: Swift.String?)
 }
 extension QoreIDSDK.PhoneNumber {
   public func adjustedNationalNumber() -> Swift.String
@@ -869,6 +879,7 @@ extension QoreIDSDK.CameraOutputMode : Swift.Equatable {}
 extension QoreIDSDK.CameraOutputMode : Swift.Hashable {}
 extension QoreIDSDK.CaptureError : Swift.Equatable {}
 extension QoreIDSDK.CaptureError : Swift.Hashable {}
+extension QoreIDSDK.CameraManager : Swift.Sendable {}
 extension QoreIDSDK.NotificationName : Swift.Equatable {}
 extension QoreIDSDK.NotificationName : Swift.Hashable {}
 extension QoreIDSDK.NotificationName : Swift.RawRepresentable {}
