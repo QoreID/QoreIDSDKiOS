@@ -62,11 +62,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BmOkKM33P9RlswTlYICmEG9Vry0=
+		hzM69qvHg3G71qfOGvvMgJPFd5I=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		8J7siwgoLQYdQTDJw1E9BYGDlaU=
+		/xMCOw+W/h9q540qumejX84AQaA=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uWLmKfdhiDQXnnvUkD3Vo58UA9Y=
+		8ZkSxrBUmanSkQo9A0GkdNQPmmE=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8J7siwgoLQYdQTDJw1E9BYGDlaU=
+		/xMCOw+W/h9q540qumejX84AQaA=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fS/6IUtRXkwAOS5PTGukDuw0LO4=
+		75BOBDxBVy4p7gfNQUPsftmMqJI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -357,7 +357,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TIQmiecbd5mLcQRSukk4LJpnq2XM4hBUS+6H2Myp/W4=
+			EkXFgbnaqI6LgaoXMXi79b/K2Hjjli8KM26XV9eA7bo=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -385,14 +385,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lTzNvuPi9tcPoeEFp65vpbSxiGbG8vdjB40KswaKVjs=
+			0ajjrkKrJ8ArSSZzggVFHYumfFllxcZYck8zgCVcyTo=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TIQmiecbd5mLcQRSukk4LJpnq2XM4hBUS+6H2Myp/W4=
+			EkXFgbnaqI6LgaoXMXi79b/K2Hjjli8KM26XV9eA7bo=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -420,7 +420,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uo5LGgPueN67iF/fg1tqSQF/cJYRdbqScePpT2QHa98=
+			b9hB3HVU0T22AINHIlz1Alr1mtASVrr9cIYPR2GE/ns=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
