@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		/xMCOw+W/h9q540qumejX84AQaA=
+		3Q/cnT16KuvvByu1HYv/jLNRPjU=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8ZkSxrBUmanSkQo9A0GkdNQPmmE=
+		s7lms0Ild06CJbfT3tZABsfgF3Y=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		/xMCOw+W/h9q540qumejX84AQaA=
+		3Q/cnT16KuvvByu1HYv/jLNRPjU=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		75BOBDxBVy4p7gfNQUPsftmMqJI=
+		9cAd5WHN5/M8hNsW64gihej1NE4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -357,7 +357,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EkXFgbnaqI6LgaoXMXi79b/K2Hjjli8KM26XV9eA7bo=
+			+cDrrqQRRpCQNsAQdUj6RKj+V/J5sxTI5eNZudGoCzc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -385,14 +385,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ajjrkKrJ8ArSSZzggVFHYumfFllxcZYck8zgCVcyTo=
+			WuaqnDYBDV+7X08b2bvXt9xohmSEnUzhtsQ8TGiUhm0=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EkXFgbnaqI6LgaoXMXi79b/K2Hjjli8KM26XV9eA7bo=
+			+cDrrqQRRpCQNsAQdUj6RKj+V/J5sxTI5eNZudGoCzc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -420,7 +420,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b9hB3HVU0T22AINHIlz1Alr1mtASVrr9cIYPR2GE/ns=
+			mZP5CjVhlas/K8uVpw8GTCssMAqeSI1q5CV2PrjvU0s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

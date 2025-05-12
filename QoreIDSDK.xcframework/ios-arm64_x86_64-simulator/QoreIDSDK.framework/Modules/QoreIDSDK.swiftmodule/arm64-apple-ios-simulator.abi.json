@@ -31657,35 +31657,35 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicFormViewController.swift",
       "kind": "Array",
-      "offset": 354,
+      "offset": 394,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicFormViewController.swift",
       "kind": "Dictionary",
-      "offset": 402,
+      "offset": 442,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicFormViewController.swift",
       "kind": "Dictionary",
-      "offset": 449,
+      "offset": 489,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicFormViewController.swift",
       "kind": "StringLiteral",
-      "offset": 653,
+      "offset": 693,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicFormViewController.swift",
       "kind": "StringLiteral",
-      "offset": 686,
+      "offset": 726,
       "length": 2,
       "value": "\"\""
     },
@@ -32175,21 +32175,21 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/cellcontroller\/CellController.swift",
       "kind": "IntegerLiteral",
-      "offset": 696,
+      "offset": 720,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/cellcontroller\/CellController.swift",
       "kind": "IntegerLiteral",
-      "offset": 730,
+      "offset": 754,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/cellcontroller\/CellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 768,
+      "offset": 792,
       "length": 5,
       "value": "false"
     },
@@ -33652,14 +33652,14 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "StringLiteral",
-      "offset": 5583,
+      "offset": 5657,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "StringLiteral",
-      "offset": 5935,
+      "offset": 6009,
       "length": 2,
       "value": "\"\""
     },
@@ -42843,35 +42843,42 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 994,
+      "offset": 945,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1037,
+      "offset": 1098,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6077,
+      "offset": 1141,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6496,
+      "offset": 11058,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7687,
+      "offset": 11477,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12811,
       "length": 5,
       "value": "false"
     },
@@ -42955,21 +42962,21 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/CellModel+QoreID.swift",
       "kind": "StringLiteral",
-      "offset": 3290,
+      "offset": 3325,
       "length": 15,
       "value": "\"number-string\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/CellModel+QoreID.swift",
       "kind": "StringLiteral",
-      "offset": 5130,
+      "offset": 5178,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/CellModel+QoreID.swift",
       "kind": "IntegerLiteral",
-      "offset": 5158,
+      "offset": 5206,
       "length": 1,
       "value": "0"
     },
@@ -43039,7 +43046,7 @@
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/collection\/QoreCollectionModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1252,
+      "offset": 1268,
       "length": 5,
       "value": "false"
     },
