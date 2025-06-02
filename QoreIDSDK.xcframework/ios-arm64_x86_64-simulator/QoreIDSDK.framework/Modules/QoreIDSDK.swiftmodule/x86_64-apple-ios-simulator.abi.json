@@ -25745,6 +25745,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "QoreIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -34075,6 +34085,34 @@
       "offset": 1394,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicForm+QoreIDParam.swift",
+      "kind": "StringLiteral",
+      "offset": 3536,
+      "length": 5,
+      "value": "\"nin\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicForm+QoreIDParam.swift",
+      "kind": "StringLiteral",
+      "offset": 3569,
+      "length": 17,
+      "value": "\"drivers_license\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicForm+QoreIDParam.swift",
+      "kind": "StringLiteral",
+      "offset": 3610,
+      "length": 5,
+      "value": "\"vin\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/reusables\/dynamicform\/formviewcontroller\/DynamicForm+QoreIDParam.swift",
+      "kind": "StringLiteral",
+      "offset": 3631,
+      "length": 5,
+      "value": "\"bvn\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/infrastructure\/extensions\/GenExtensions.swift",
@@ -44519,6 +44557,69 @@
       "offset": 396,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 283,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 864,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "StringLiteral",
+      "offset": 1293,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "StringLiteral",
+      "offset": 1721,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1787,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2157,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "StringLiteral",
+      "offset": 2532,
+      "length": 13,
+      "value": "\"powered by \""
+    },
+    {
+      "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/submodule\/biometrics\/FaceScanInstructionView.swift",
+      "kind": "StringLiteral",
+      "offset": 2632,
+      "length": 8,
+      "value": "\"QoreID\""
     },
     {
       "filePath": "\/Users\/guruking\/Documents\/iOS\/QoreIDSDK\/QoreIDSDK\/coremodule\/qoreidinit\/ApiResponseWrapper.swift",
