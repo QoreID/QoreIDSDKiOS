@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QoreIDSDK-Swift.h</key>
 		<data>
-		PriroBE0e749+kP/6WL6k5pf/LE=
+		jIJQQWpKQJSWC9Ws8jmB0T4JEi4=
 		</data>
 		<key>Headers/QoreIDSDk.h</key>
 		<data>
@@ -62,27 +62,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		moNM1T3y+WXjiJPIDzf5GXGZXws=
+		VZb0qRsyzISu/I24XAZCv+9fOOs=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		d/PMsfacx8xqj1ol6d70G/8f8qQ=
+		rSn83tj7yIo2G3oSCPgJY3lF6M4=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Hz+too6FdYttJ5Xn4CeW8VDl4fs=
+		VDEzKcw9iSaXZxu0VTK97LRKli0=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Qv4vtRIL+iuqzAhik5uiA4U2kmo=
+		vWkmTl0pT6XIK70e4NNtbpKfsig=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Hz+too6FdYttJ5Xn4CeW8VDl4fs=
+		VDEzKcw9iSaXZxu0VTK97LRKli0=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vLdvAQKihqWwWgle5mvx/gLpSzI=
+		v5bj/l8hBILbkIF1XyKw6a9fCEw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -132,6 +132,10 @@
 		<data>
 		CUNVLWEFyAluY3QRJ93FPVGdXhw=
 		</data>
+		<key>backButtonArrow.png</key>
+		<data>
+		9OCAqerI6cXviN0/xCscYm6BfBI=
+		</data>
 		<key>back_btn@2x.png</key>
 		<data>
 		lWCPlgCVplB4uk48P6vFICdg8SY=
@@ -159,6 +163,10 @@
 		<key>businessadress.json</key>
 		<data>
 		ar2nLDN7i88deRkKntmC7DnZtCg=
+		</data>
+		<key>closeArrow.png</key>
+		<data>
+		7mQ62k2an59W94zp5Rk4jGNhirw=
 		</data>
 		<key>closebuttonicon@2x.png</key>
 		<data>
@@ -195,6 +203,50 @@
 		<key>fields.json</key>
 		<data>
 		Jikt3tb0YDP691llG1Nsf4hGnYI=
+		</data>
+		<key>livenessLeftArrow.png</key>
+		<data>
+		6jB6Eu3r/IWEp3Hhsd/N1AwPZJY=
+		</data>
+		<key>livenessRightArrow.png</key>
+		<data>
+		etbh5v//eT/OXu2myUUsU2vRJig=
+		</data>
+		<key>liveness_instruction_step_four_correct.png</key>
+		<data>
+		BX7xhRgKRaI9rDP3Izx+p1Z7zuo=
+		</data>
+		<key>liveness_instruction_step_four_incorrect.png</key>
+		<data>
+		pgHlh1s/CiEb3iBMmxR44UwJMPA=
+		</data>
+		<key>liveness_instruction_step_one_correct.png</key>
+		<data>
+		ZJbRx2Fu4Q0pQqRvFFBYS5PBmQg=
+		</data>
+		<key>liveness_instruction_step_one_incorrect.png</key>
+		<data>
+		icYUA+bi/TPinw9EzwMXaD2W3nE=
+		</data>
+		<key>liveness_instruction_step_three_correct.png</key>
+		<data>
+		HxZAJchMk6/z0yjvUMUrvFC5beo=
+		</data>
+		<key>liveness_instruction_step_three_incorrect.png</key>
+		<data>
+		Ojmz8PlhfeLSbKFmwmvZVwblIX0=
+		</data>
+		<key>liveness_instruction_step_two_correct.png</key>
+		<data>
+		3O1OJoEZqC4/mgBfrkhkMC40FK8=
+		</data>
+		<key>liveness_instruction_step_two_incorrect.png</key>
+		<data>
+		R4I6gmCc14qdLOfVLxtL93uxwnQ=
+		</data>
+		<key>livenesscheckimage.png</key>
+		<data>
+		p+tfOdbIMN1f7Bfa4j8EN7CRG2k=
 		</data>
 		<key>location_marker.png</key>
 		<data>
@@ -239,7 +291,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mD/PWxXSjA1mftwEbgTWGr/2Gi4vXJqB48ItRU0RZz0=
+			x8YoeFWY6j0hKkRr7VICaLiJRB7xjUd+Yisg86/+Vf8=
 			</data>
 		</dict>
 		<key>Headers/QoreIDSDk.h</key>
@@ -337,35 +389,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qT7xgv+CGSlwaoiCB8DgpQwvKht6zyWJOKFChug5j5I=
+			cSHssrt8iA1fgk5oCW4g7icrTWZ3c7XCVC+m+PyLbHA=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3YXP6NGUGd+R5ARlf8wOaWMsBi5FyNh9jx3vRVUbIKw=
+			A7gH/kgNQ9U+Mr+n6BN5c2iJ0XqPPLfo3CQtVtUIuaY=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ryPHP9bHrPNZbqIOQuga0NjzIhPFEfEPdtc8vc+EPi4=
+			b/e6XPyFTEAu2JSw+iTRFmp8i2gohiHQNIQral6EayY=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3YXP6NGUGd+R5ARlf8wOaWMsBi5FyNh9jx3vRVUbIKw=
+			A7gH/kgNQ9U+Mr+n6BN5c2iJ0XqPPLfo3CQtVtUIuaY=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iKJgS/WTpNgLNF37ccX7BNFXS6ukMLYEsehvLjQEozc=
+			jr/+SHmC/CX9diKEYKgULo3mf5PgVLRUHCS/1CViCho=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -452,6 +504,13 @@
 			UjCt87oCMoSL+O0hHG8IQUQlVkqo5YW5DmDH0ArJxec=
 			</data>
 		</dict>
+		<key>backButtonArrow.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OmzNPlz4DYsRze0y3F2Xo4qZkQvFasCy4LVx/7g+eTw=
+			</data>
+		</dict>
 		<key>back_btn@2x.png</key>
 		<dict>
 			<key>hash2</key>
@@ -499,6 +558,13 @@
 			<key>hash2</key>
 			<data>
 			1mGUtkAqQbCtqMkDVStoOepkIvpIGAqO2fk//QwJQB4=
+			</data>
+		</dict>
+		<key>closeArrow.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nx4jElbPO//wpJ9zYMDrG2FsItVD4Mtq8i6GsrXpbEU=
 			</data>
 		</dict>
 		<key>closebuttonicon@2x.png</key>
@@ -562,6 +628,83 @@
 			<key>hash2</key>
 			<data>
 			E/F+ByeRPQC7RD5G5lu11wvS1VexldNlyb7sqFVcgAM=
+			</data>
+		</dict>
+		<key>livenessLeftArrow.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0HA1/0SRue3AyT2alQL/seaEm8gRdx0DTPiaxz16sxM=
+			</data>
+		</dict>
+		<key>livenessRightArrow.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O9SuXA8lBWvwlK79TIpxM58u43BWcAEiI6mvTNrhDsY=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_four_correct.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PAOTCj0MCaF0BtLE0dI/9oKMfiQ5lg6iL5aGc7L/V9A=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_four_incorrect.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Sk2n4sp2TobAYqCQQEJrUAFU9gHQYSamugGguSXsxl0=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_one_correct.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XVPM9mlyRbBOe7BMRbtQemukK7A349QAhtad5348PxM=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_one_incorrect.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K3azUv7I9hwK934+25TDIO65OTc1NuV+FfzzQg50ihE=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_three_correct.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			71oZ8Q+oas/MAFUuvdv1V5TzQPsS9RZZjGWX6mGigHI=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_three_incorrect.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WVNWljVs9zldVDDGk4ZX4XbOLUX3EP+ugunIkIyijJY=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_two_correct.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IG3QBY4AepsocFA/rFLIDJDIbNKKruCQb/SKW3STSZk=
+			</data>
+		</dict>
+		<key>liveness_instruction_step_two_incorrect.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			a8NLC1DZF+h6v3Tnw+Ub4VNwOQWW96SewxXnxlPL+ts=
+			</data>
+		</dict>
+		<key>livenesscheckimage.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			45qbRc32EjsyPmUGZKXm7fxD/DhMjAPxOgbkWYnb7QI=
 			</data>
 		</dict>
 		<key>location_marker.png</key>

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name QoreIDSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name QoreIDSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFoundation
 import CommonCrypto
 import Contacts
@@ -25,7 +25,7 @@ import UserNotifications
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public typealias MetadataCallback = (() throws -> Foundation.Data?)
+public typealias MetadataCallback = () throws -> Foundation.Data?
 @objc final public class PhoneNumberKit : ObjectiveC.NSObject {
   public init(metadataCallback: @escaping QoreIDSDK.MetadataCallback = PhoneNumberKit.defaultMetadataCallback)
   final public func parse(_ numberString: Swift.String, withRegion region: Swift.String = PhoneNumberKit.defaultRegionCode(), ignoreType: Swift.Bool = false) throws -> QoreIDSDK.PhoneNumber
@@ -33,18 +33,38 @@ public typealias MetadataCallback = (() throws -> Foundation.Data?)
   final public func isValidPhoneNumber(_ numberString: Swift.String, withRegion region: Swift.String = PhoneNumberKit.defaultRegionCode(), ignoreType: Swift.Bool = false) -> Swift.Bool
   final public func format(_ phoneNumber: QoreIDSDK.PhoneNumber, toType formatType: QoreIDSDK.PhoneNumberFormat, withPrefix prefix: Swift.Bool = true) -> Swift.String
   final public func allCountries() -> [Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func countries(withCode countryCode: Swift.UInt64) -> [Swift.String]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mainCountry(forCode countryCode: Swift.UInt64) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func countryCode(for country: Swift.String) -> Swift.UInt64?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func leadingDigits(for country: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getRegionCode(of phoneNumber: QoreIDSDK.PhoneNumber) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getExampleNumber(forCountry countryCode: Swift.String, ofType type: QoreIDSDK.PhoneNumberType = .mobile) -> QoreIDSDK.PhoneNumber?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getFormattedExampleNumber(forCountry countryCode: Swift.String, ofType type: QoreIDSDK.PhoneNumberType = .mobile, withFormat format: QoreIDSDK.PhoneNumberFormat = .international, withPrefix prefix: Swift.Bool = true) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func metadata(for country: Swift.String) -> QoreIDSDK.MetadataTerritory?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func metadata(forCode countryCode: Swift.UInt64) -> [QoreIDSDK.MetadataTerritory]?
+  #endif
   final public func possiblePhoneNumberLengths(forCountry country: Swift.String, phoneNumberType: QoreIDSDK.PhoneNumberType, lengthType: QoreIDSDK.PossibleLengthType) -> [Swift.Int]
   final public class func defaultRegionCode() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func defaultMetadataCallback() throws -> Foundation.Data?
+  #endif
   @objc deinit
 }
 extension QoreIDSDK.PhoneNumberKit {
@@ -65,9 +85,11 @@ public enum PhoneNumberError : Swift.Error, Swift.Equatable {
   public static func == (a: QoreIDSDK.PhoneNumberError, b: QoreIDSDK.PhoneNumberError) -> Swift.Bool
 }
 extension QoreIDSDK.PhoneNumberError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 public enum PhoneNumberFormat {
   case e164
@@ -93,7 +115,9 @@ public enum PhoneNumberType : Swift.String, Swift.Codable {
   case uan
   case unknown
   case notParsed
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -102,7 +126,9 @@ public enum PhoneNumberType : Swift.String, Swift.Codable {
 public enum PossibleLengthType : Swift.String, Swift.Codable {
   case national
   case localOnly
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -123,13 +149,21 @@ public enum PossibleLengthType : Swift.String, Swift.Codable {
     @objc get
   }
   public init(phoneNumberKit pnk: QoreIDSDK.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension QoreIDSDK.PhoneNumberFormatter {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic open func string(for obj: Any?) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic open func getObjectValue(_ obj: Swift.AutoreleasingUnsafeMutablePointer<Swift.AnyObject?>?, for string: Swift.String, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic open func isPartialStringValid(_ partialStringPtr: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString>, proposedSelectedRange proposedSelRangePtr: Foundation.NSRangePointer?, originalString origString: Swift.String, originalSelectedRange origSelRange: Foundation.NSRange, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  #endif
 }
 public struct MetadataTerritory : Swift.Decodable {
   public let codeID: Swift.String
@@ -221,6 +255,7 @@ extension UIKit.UIFont {
   public static let systemFont16Regular: UIKit.UIFont
   public static let systemFont14Regular: UIKit.UIFont
   public static let systemFont16Bold: UIKit.UIFont
+  public static let systemFont20Bold: UIKit.UIFont
   public static let systemFont14Bold: UIKit.UIFont
   public static let systemFont16Medium: UIKit.UIFont
   public static let systemFont18Medium: UIKit.UIFont
@@ -232,6 +267,7 @@ extension UIKit.UIFont {
   public static let systemFont24Medium: UIKit.UIFont
   public static let systemFont12Bold: UIKit.UIFont
   public static let systemFont34Bold: UIKit.UIFont
+  public static let systemFont28Bold: UIKit.UIFont
   public static let systemFont36Bold: UIKit.UIFont
 }
 extension UIKit.UIColor {
@@ -244,7 +280,9 @@ public struct Response {
   public init(data: Foundation.Data)
 }
 extension QoreIDSDK.Response {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func decode<T>(_ type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
 }
 @_hasMissingDesignatedInitializers public class LocalStorage {
   @objc deinit
@@ -270,9 +308,11 @@ extension QoreIDSDK.PhoneNumber : Swift.Hashable {
 extension QoreIDSDK.PhoneNumber {
   public static func notPhoneNumber() -> QoreIDSDK.PhoneNumber
   public func notParsed() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public var url: Foundation.URL? {
     get
   }
+  #endif
 }
 extension QoreIDSDK.PhoneNumber {
   @available(*, unavailable, message: "use PhoneNumberKit instead to produce PhoneNumbers")
@@ -282,31 +322,49 @@ extension QoreIDSDK.PhoneNumber {
 }
 public class QoreIDParam {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func clientId(clientId: Swift.String?) -> QoreIDSDK.QoreIDParam
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func customerReference(_ customerReference: Swift.String?) -> QoreIDSDK.QoreIDParam
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func inputData(_ inputData: QoreIDSDK.InputData?) -> QoreIDSDK.QoreIDParam
+  #endif
   public func collection(_ productCode: Swift.String) -> QoreIDSDK.QoreIDParam
   public func workFlow(_ workflowId: Swift.Int) -> QoreIDSDK.QoreIDParam
   public func workFlowRequiredIdentity(_ identity: Swift.String) -> QoreIDSDK.QoreIDParam
+  #if compiler(>=5.3) && $NonescapableTypes
   public func ocrAcceptedDocuments(_ ocrAcceptedDocuments: Swift.Array<Swift.String>?) -> QoreIDSDK.QoreIDParam
+  #endif
   public func build() -> QoreIDSDK.QoreIDParam
   @objc deinit
 }
 public struct InputData {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(applicant: QoreIDSDK.ApplicantData? = nil, address: QoreIDSDK.AddressData? = nil, identity: QoreIDSDK.IdentityData? = nil, extraData: QoreIDSDK.VerificationExtraData? = nil)
+  #endif
 }
 public class ApplicantData {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(firstname: Swift.String? = nil, lastname: Swift.String? = nil, phone: Swift.String? = nil, middlename: Swift.String? = nil, dob: Swift.String? = nil, email: Swift.String? = nil, gender: Swift.String? = nil, idType: Swift.String? = nil, idNumber: Swift.String? = nil, phoneCountryCode: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 public struct AddressData {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(address: Swift.String? = nil, city: Swift.String? = nil, lga: Swift.String? = nil, state: Swift.String? = nil, region: Swift.String? = nil, district: Swift.String? = nil, county: Swift.String? = nil, subCounty: Swift.String? = nil, constituency: Swift.String? = nil, municipality: Swift.String? = nil, zone: Swift.String? = nil, digitalAddress: Swift.String? = nil, town: Swift.String? = nil, ccc: Swift.String = "")
+  #endif
 }
 public struct IdentityData {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(idType: Swift.String? = nil, idNumber: Swift.String? = nil)
+  #endif
 }
 public class VerificationExtraData {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(organisationId: Swift.String? = nil, organisationName: Swift.String? = nil, requestSource: Swift.String? = nil, internalReferenceId: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class DefaultsKey {
@@ -321,13 +379,17 @@ final public class Defaults {
   public init(userDefaults: Foundation.UserDefaults = UserDefaults.standard)
   final public func clear<ValueType>(_ key: QoreIDSDK.Key<ValueType>) where ValueType : Swift.Decodable, ValueType : Swift.Encodable
   final public func has<ValueType>(_ key: QoreIDSDK.Key<ValueType>) -> Swift.Bool where ValueType : Swift.Decodable, ValueType : Swift.Encodable
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func get<ValueType>(for key: QoreIDSDK.Key<ValueType>) -> ValueType? where ValueType : Swift.Decodable, ValueType : Swift.Encodable
+  #endif
   final public func set<ValueType>(_ value: ValueType, for key: QoreIDSDK.Key<ValueType>) where ValueType : Swift.Decodable, ValueType : Swift.Encodable
   final public func removeAll(bundle: Foundation.Bundle = Bundle.main)
   @objc deinit
 }
 extension QoreIDSDK.Defaults {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func get<ValueType>(for key: QoreIDSDK.Key<ValueType>) -> ValueType? where ValueType : Swift.Decodable, ValueType : Swift.Encodable, ValueType : Swift.RawRepresentable, ValueType.RawValue : Swift.Decodable, ValueType.RawValue : Swift.Encodable
+  #endif
   final public func set<ValueType>(_ value: ValueType, for key: QoreIDSDK.Key<ValueType>) where ValueType : Swift.Decodable, ValueType : Swift.Encodable, ValueType : Swift.RawRepresentable, ValueType.RawValue : Swift.Decodable, ValueType.RawValue : Swift.Encodable
 }
 @_hasMissingDesignatedInitializers public class Countries {
@@ -348,7 +410,9 @@ public class Country {
   public var flag: Swift.String?
   public var countryCode: Swift.String
   public var isMain: Swift.Bool?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String, phoneExtension: Swift.String?, flag: Swift.String, countryCode: Swift.String, isMain: Swift.Bool?)
+  #endif
   @objc deinit
 }
 public struct ResultData {
@@ -404,11 +468,15 @@ public enum SheetSize {
 }
 public struct QoreIdSdk {
   public static let shared: QoreIDSDK.QoreIdSdk
+  #if compiler(>=5.3) && $NonescapableTypes
   public func launch(param: QoreIDSDK.QoreIDParam, vc: UIKit.UIViewController, _ source: Swift.String = "", onResult: ((any QoreIDSDK.QoreIDResult) -> ())?)
+  #endif
   public func continueVerifindTracking()
 }
 @_hasMissingDesignatedInitializers final public class PartialFormatter {
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(phoneNumberKit: QoreIDSDK.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
+  #endif
   final public var defaultRegion: Swift.String {
     get
     set
@@ -497,13 +565,21 @@ extension QoreIDSDK.MetadataTerritory {
     case numberFormats
     case leadingDigits
     case availableFormats
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(intValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public var intValue: Swift.Int? {
       get
     }
+    #endif
     public var rawValue: Swift.String {
       get
     }
@@ -522,13 +598,21 @@ extension QoreIDSDK.MetadataPhoneNumberFormat {
     case nationalPrefixFormattingRule
     case nationalPrefixOptionalWhenFormatting
     case domesticCarrierCodeFormattingRule
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(intValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public var intValue: Swift.Int? {
       get
     }
+    #endif
     public var rawValue: Swift.String {
       get
     }
@@ -564,8 +648,12 @@ extension UIKit.UILabel {
   @_Concurrency.MainActor @preconcurrency public func setUpGenLabel(text: Swift.String, textColor: UIKit.UIColor = UIColor.textColor, font: UIKit.UIFont, numberOfLines: Swift.Int = 1, textAlignment: UIKit.NSTextAlignment = .left)
 }
 extension UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func simpleAlert(alertType: UIKit.UIAlertController.Style? = .alert, title: Swift.String?, message: Swift.String = "", action: (() -> ())? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func setUpNavigationTitle(_ title: Swift.String?)
+  #endif
 }
 public enum CameraState {
   case ready, accessDenied, noDeviceFound, notDetermined
@@ -585,7 +673,9 @@ public enum CameraDevice {
 }
 public enum CameraFlashMode : Swift.Int {
   case off, on, auto
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -609,12 +699,16 @@ public enum CaptureContent {
   case asset(Photos.PHAsset)
 }
 extension QoreIDSDK.CaptureContent {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var asImage: UIKit.UIImage? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var asData: Foundation.Data? {
     get
   }
+  #endif
 }
 public enum CaptureError : Swift.Error {
   case noImageData
@@ -635,7 +729,9 @@ public enum CaptureError : Swift.Error {
   @_Concurrency.MainActor @preconcurrency open var showErrorsToUsers: Swift.Bool
   @_Concurrency.MainActor @preconcurrency open var showAccessPermissionPopupAutomatically: Swift.Bool
   @_Concurrency.MainActor @preconcurrency open var showErrorBlock: (_ erTitle: Swift.String, _ erMessage: Swift.String) -> Swift.Void
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func canSetPreset(preset: AVFoundation.AVCaptureSession.Preset) -> Swift.Bool?
+  #endif
   @_Concurrency.MainActor @preconcurrency open var writeFilesToPhoneLibrary: Swift.Bool
   @_Concurrency.MainActor @preconcurrency open var shouldRespondToOrientationChanges: Swift.Bool {
     get
@@ -701,21 +797,29 @@ public enum CaptureError : Swift.Error {
   @_Concurrency.MainActor @preconcurrency open func addPreviewLayerToView(_ view: UIKit.UIView) -> QoreIDSDK.CameraState
   @discardableResult
   @_Concurrency.MainActor @preconcurrency open func addPreviewLayerToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode) -> QoreIDSDK.CameraState
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @_Concurrency.MainActor @preconcurrency open func addLayerPreviewToView(_ view: UIKit.UIView, newCameraOutputMode: QoreIDSDK.CameraOutputMode, completion: (() -> Swift.Void)?) -> QoreIDSDK.CameraState
+  #endif
   @_Concurrency.MainActor @preconcurrency open func zoom(_ scale: CoreFoundation.CGFloat)
   @_Concurrency.MainActor @preconcurrency open func askUserForCameraPermission(_ completion: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency open func stopCaptureSession()
   @_Concurrency.MainActor @preconcurrency open func resumeCaptureSession()
   @_Concurrency.MainActor @preconcurrency open func stopAndRemoveCaptureSession()
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated)
   @_Concurrency.MainActor @preconcurrency open func capturePictureWithCompletion(_ imageCompletion: @escaping (UIKit.UIImage?, Foundation.NSError?) -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func capturePictureWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated)
   @_Concurrency.MainActor @preconcurrency open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (Foundation.Data?, Foundation.NSError?) -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func capturePictureDataWithCompletion(_ imageCompletion: @escaping (QoreIDSDK.CaptureResult) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency open func startRecordingVideo()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func stopVideoRecording(_ completion: ((_ videoURL: Foundation.URL?, _ error: Foundation.NSError?) -> Swift.Void)?)
+  #endif
   public typealias QRCodeDetectionHandler = (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void
   @_Concurrency.MainActor @preconcurrency open func startQRCodeDetection(_ handler: @escaping QoreIDSDK.CameraManager.QRCodeDetectionHandler)
   @_Concurrency.MainActor @preconcurrency open func stopQRCodeDetection()
@@ -724,12 +828,14 @@ public enum CaptureError : Swift.Error {
   @_Concurrency.MainActor @preconcurrency open func changeFlashMode() -> QoreIDSDK.CameraFlashMode
   @_Concurrency.MainActor @preconcurrency open func hasFlash(for cameraDevice: QoreIDSDK.CameraDevice) -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency @objc public func fileOutput(_: AVFoundation.AVCaptureFileOutput, didStartRecordingTo _: Foundation.URL, from _: [AVFoundation.AVCaptureConnection])
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc open func fileOutput(_: AVFoundation.AVCaptureFileOutput, didFinishRecordingTo outputFileURL: Foundation.URL, from _: [AVFoundation.AVCaptureConnection], error: (any Swift.Error)?)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency open func resetOrientation()
   @_Concurrency.MainActor @preconcurrency open func _doFlipAnimation()
   @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CameraLocationManager : ObjectiveC.NSObject, CoreLocation.CLLocationManagerDelegate {
-    @objc public func locationManager(_: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+    @objc public func locationManager(_: CoreLocation.CLLocationManager, didUpdateLocations locations: [_LocationEssentials.CLLocation])
     @objc public func locationManager(_: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
     @objc deinit
   }
@@ -741,14 +847,14 @@ extension QoreIDSDK.CameraManager : AVFoundation.AVCaptureMetadataOutputObjectsD
 }
 extension Foundation.Data {
   public func printExifData()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func limitDataSize(to maxSizeInKB: Swift.Int) -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resizeImage(to maxSize: CoreFoundation.CGSize) -> Foundation.Data?
+  #endif
 }
-#if compiler(>=5.3) && $NoncopyableGenerics
-extension Swift.Optional {
-  public func or(other: Wrapped) -> Wrapped
-}
-#else
+#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional {
   public func or(other: Wrapped) -> Wrapped
 }
@@ -756,7 +862,9 @@ extension Swift.Optional {
 public enum NotificationName : Swift.String {
   case IHProgressHUDDidReceiveTouchEvent, IHProgressHUDDidTouchDownInside, IHProgressHUDWillDisappear, IHProgressHUDDidDisappear, IHProgressHUDWillAppear, IHProgressHUDDidAppear, IHProgressHUDStatusUserInfoKey
   public func getNotificationName() -> Foundation.Notification.Name
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -766,7 +874,9 @@ public enum IHProgressHUDStyle : Swift.Int {
   case light
   case dark
   case custom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -778,7 +888,9 @@ public enum IHProgressHUDMaskType : Swift.Int {
   case black
   case gradient
   case custom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -787,7 +899,9 @@ public enum IHProgressHUDMaskType : Swift.Int {
 public enum IHProgressHUDAnimationType : Swift.Int {
   case flat
   case native
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -801,8 +915,12 @@ extension QoreIDSDK.IHProgressHUD {
   @_Concurrency.MainActor @preconcurrency public class func setHUD(backgroundColor color: UIKit.UIColor)
   @_Concurrency.MainActor @preconcurrency public class func set(defaultMaskType maskType: QoreIDSDK.IHProgressHUDMaskType)
   @_Concurrency.MainActor @preconcurrency public class func set(defaultAnimationType type: QoreIDSDK.IHProgressHUDAnimationType)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func set(status: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func set(containerView: UIKit.UIView?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public class func set(minimumSize: CoreFoundation.CGSize)
   @_Concurrency.MainActor @preconcurrency public class func set(ringThickness: CoreFoundation.CGFloat)
   @_Concurrency.MainActor @preconcurrency public class func set(ringRadius: CoreFoundation.CGFloat)
@@ -828,22 +946,40 @@ extension QoreIDSDK.IHProgressHUD {
   @_Concurrency.MainActor @preconcurrency public class func setMaxSupportedWindowLevel(maxSupportedWindowLevel windowLevel: UIKit.UIWindow.Level)
   @_Concurrency.MainActor @preconcurrency public class func setHapticsEnabled(hapticsEnabled: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency public class func show()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func show(withStatus status: Swift.String?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public class func show(progress: CoreFoundation.CGFloat)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func show(progress: CoreFoundation.CGFloat, status: Swift.String?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public class func setOffsetFromCenter(_ offset: UIKit.UIOffset)
   @_Concurrency.MainActor @preconcurrency public class func resetOffsetFromCenter()
   @_Concurrency.MainActor @preconcurrency public class func popActivity()
   @_Concurrency.MainActor @preconcurrency public class func dismiss()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func dismissWithCompletion(_ completion: (() -> Swift.Void)?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public class func dismissWithDelay(_ delay: Foundation.TimeInterval)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func dismissWithDelay(_ delay: Foundation.TimeInterval, completion: (() -> Swift.Void)?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public class func isVisible() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func displayDurationForString(_ string: Swift.String?) -> Foundation.TimeInterval
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func showInfowithStatus(_ status: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func showImage(_ image: UIKit.UIImage, status: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func showSuccesswithStatus(_ status: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func showError(withStatus status: Swift.String?)
+  #endif
 }
 extension QoreIDSDK.PhoneNumber {
   public func adjustedNationalNumber() -> Swift.String
