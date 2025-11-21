@@ -358,7 +358,7 @@ public struct AddressData {
 }
 public struct IdentityData {
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(idType: Swift.String? = nil, idNumber: Swift.String? = nil)
+  public init(idType: Swift.String? = nil, idNumber: Swift.String? = nil, useCache: Swift.Bool? = nil)
   #endif
 }
 public class VerificationExtraData {

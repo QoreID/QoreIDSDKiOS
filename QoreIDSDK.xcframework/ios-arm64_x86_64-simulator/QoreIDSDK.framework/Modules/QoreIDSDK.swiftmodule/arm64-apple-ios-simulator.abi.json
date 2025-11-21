@@ -9963,7 +9963,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(idType:idNumber:)",
+            "printedName": "init(idType:idNumber:useCache:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10000,11 +10000,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9QoreIDSDK12IdentityDataV6idType0E6NumberACSSSg_AFtcfc",
-            "mangledName": "$s9QoreIDSDK12IdentityDataV6idType0E6NumberACSSSg_AFtcfc",
+            "usr": "s:9QoreIDSDK12IdentityDataV6idType0E6Number8useCacheACSSSg_AGSbSgtcfc",
+            "mangledName": "$s9QoreIDSDK12IdentityDataV6idType0E6Number8useCacheACSSSg_AGSbSgtcfc",
             "moduleName": "QoreIDSDK",
             "declAttributes": [
               "AccessControl"
