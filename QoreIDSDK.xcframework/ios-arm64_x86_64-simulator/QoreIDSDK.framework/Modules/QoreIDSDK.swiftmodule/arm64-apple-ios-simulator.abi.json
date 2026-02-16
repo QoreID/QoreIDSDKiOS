@@ -32085,6 +32085,13 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/submodule\/biometrics\/facescanview\/FaceScanStartViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 463,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/util\/phonenumbervalidator\/PhoneNumberKit.swift",
       "kind": "BooleanLiteral",
       "offset": 1273,
@@ -43399,7 +43406,21 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/dependencies\/NavCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 5296,
+      "offset": 4533,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/dependencies\/NavCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4974,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/dependencies\/NavCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5440,
       "length": 4,
       "value": "true"
     },
@@ -45372,8 +45393,15 @@
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/submodule\/biometrics\/facescanview\/FaceScanInstructionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 475,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/submodule\/biometrics\/facescanview\/FaceScanInstructionViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 457,
+      "offset": 604,
       "length": 1,
       "value": "1"
     }
