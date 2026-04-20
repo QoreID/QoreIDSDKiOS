@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QoreIDSDK-Swift.h</key>
 		<data>
-		NPYRspOjw/3MiOBzRo+8ycx/DBo=
+		tZMUrsAV2yvR1x0oi3QyGsv/ftc=
 		</data>
 		<key>Headers/QoreIDSDk.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7L9pF8KcotUGD5CrP2erMe/ZDYo=
+		fE0P4subbu2S1az+3RSTS0xhwY4=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -70,19 +70,19 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		l2K9VGW6nhPTyvqYybbDinN3SuM=
+		yNsmza6N7fYquQakRxQdIG5Lqp8=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		V3Y453eknbxn/yJse3XlaaEQH4A=
+		teQKtVJH2StBYH/dRpYxjMfreQE=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		l2K9VGW6nhPTyvqYybbDinN3SuM=
+		yNsmza6N7fYquQakRxQdIG5Lqp8=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		toO4QmDvC64SgeLIYRMW1Lax4z0=
+		oG4Rv3CpCup8TTtVXZRV2dFiCq8=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,19 +90,19 @@
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		fZpmYn7SaaytG8f8UD6ZLY10Fr0=
+		LDlT43wbDA6Dl1u13wJThdixvnM=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		fu2BI8YxN3YCdL58/oshxjjXHBo=
+		zXETVL8hMsQpfVjFDHmovK15QMU=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		fZpmYn7SaaytG8f8UD6ZLY10Fr0=
+		LDlT43wbDA6Dl1u13wJThdixvnM=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iagdUkRhwCo5+XogLuD05W6pODs=
+		6vQt5bOmR5LopcABvZ0/GRNiEZE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -311,7 +311,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WFy1Sb+WTgT1Cfy8BbqqOCuqo0ioRlt3tVsnYYW0w1g=
+			dkSfoEJksomMghof1gJTtfUVdg1103beU2+XYRnlPzo=
 			</data>
 		</dict>
 		<key>Headers/QoreIDSDk.h</key>
@@ -416,28 +416,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xhUKTh+8wzJvpvi0/kBBhUPBg2jLvEX+YBAavBPDY28=
+			x26uP/WVzJw4l2W2FuOxvWKjqg9d+XU8Ql10dJ0ASp4=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PD81wsuxcEBtg0kIWenb35zIKfXGwFHLdaPUAWdm5I0=
+			YMBziSgUIrNMbdjBeBIPkr+6+AQd5aadJGeuZC6cBUs=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xhUKTh+8wzJvpvi0/kBBhUPBg2jLvEX+YBAavBPDY28=
+			x26uP/WVzJw4l2W2FuOxvWKjqg9d+XU8Ql10dJ0ASp4=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zri4b2nj0OsNJNqFf1or15PlvBM6fKWxq7lJI8MPKWA=
+			7R8uDdXU0Xa3Y/7YOfndkwaqdWA483irpHQW/FHtAyA=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -451,28 +451,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DHZ7WkMxjcbVeJO/vvODcM2n90vEkEy7oMv0c4rWcqo=
+			0EMYg6CDI8odasAKNHJivvzwrbf6iRDQZbKddujcZOc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wo2XiUUtOHMVoSWsQBdSOHM8rNyjTiDyhOtGxcysR3s=
+			MQrBEXOBav6br9dVJ59aE0Tf1YCIrr7CQbqFBDdkpBM=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DHZ7WkMxjcbVeJO/vvODcM2n90vEkEy7oMv0c4rWcqo=
+			0EMYg6CDI8odasAKNHJivvzwrbf6iRDQZbKddujcZOc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PvO4Xiu4RSpBYPbMboEt1uZtgYoqzMFz5SJx8Jj69BM=
+			Z0w8IcL+mUqtyzA9IfAhbvwPEx7ivPny1WSL4RFAgbg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
