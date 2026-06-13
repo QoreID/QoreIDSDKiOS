@@ -323,6 +323,9 @@ extension QoreIDSDK.PhoneNumber {
 public class QoreIDParam {
   public init()
   #if compiler(>=5.3) && $NonescapableTypes
+  public func sessionToken(_ sessionToken: Swift.String?) -> QoreIDSDK.QoreIDParam
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func clientId(clientId: Swift.String?) -> QoreIDSDK.QoreIDParam
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -468,6 +471,9 @@ public enum SheetSize {
 }
 public struct QoreIdSdk {
   public static let shared: QoreIDSDK.QoreIdSdk
+  public static var apiBaseURL: Swift.String {
+    get
+  }
   #if compiler(>=5.3) && $NonescapableTypes
   public func launch(param: QoreIDSDK.QoreIDParam, vc: UIKit.UIViewController, _ source: Swift.String = "", onResult: ((any QoreIDSDK.QoreIDResult) -> ())?)
   #endif

@@ -9117,6 +9117,41 @@
           },
           {
             "kind": "Function",
+            "name": "sessionToken",
+            "printedName": "sessionToken(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QoreIDParam",
+                "printedName": "QoreIDSDK.QoreIDParam",
+                "usr": "s:9QoreIDSDK0A7IDParamC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9QoreIDSDK0A7IDParamC12sessionTokenyACSSSgF",
+            "mangledName": "$s9QoreIDSDK0A7IDParamC12sessionTokenyACSSSgF",
+            "moduleName": "QoreIDSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "clientId",
             "printedName": "clientId(clientId:)",
             "children": [
@@ -14761,6 +14796,48 @@
                 "moduleName": "QoreIDSDK",
                 "static": true,
                 "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "apiBaseURL",
+            "printedName": "apiBaseURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9QoreIDSDK0A5IdSdkV10apiBaseURLSSvpZ",
+            "mangledName": "$s9QoreIDSDK0A5IdSdkV10apiBaseURLSSvpZ",
+            "moduleName": "QoreIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9QoreIDSDK0A5IdSdkV10apiBaseURLSSvgZ",
+                "mangledName": "$s9QoreIDSDK0A5IdSdkV10apiBaseURLSSvgZ",
+                "moduleName": "QoreIDSDK",
+                "static": true,
                 "accessorKind": "get"
               }
             ]
@@ -34166,28 +34243,28 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 314,
+      "offset": 343,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "StringLiteral",
-      "offset": 359,
+      "offset": 388,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "StringLiteral",
-      "offset": 5657,
+      "offset": 5829,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/sdk\/QoreIdSdkModel.swift",
       "kind": "StringLiteral",
-      "offset": 6009,
+      "offset": 6181,
       "length": 2,
       "value": "\"\""
     },
@@ -43476,21 +43553,21 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11467,
+      "offset": 12756,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11886,
+      "offset": 13175,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/collection\/QoreCollectionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13220,
+      "offset": 14509,
       "length": 5,
       "value": "false"
     },
@@ -43742,7 +43819,7 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/app\/sdk\/QoreIdSdk.swift",
       "kind": "StringLiteral",
-      "offset": 316,
+      "offset": 407,
       "length": 2,
       "value": "\"\""
     },
@@ -44267,105 +44344,133 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 215,
+      "offset": 218,
+      "length": 36,
+      "value": "\"https:\/\/stage-qoreapi.verifynow.ng\""
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 280,
       "length": 24,
       "value": "\"https:\/\/api.qoreid.com\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 268,
+      "offset": 335,
+      "length": 42,
+      "value": "\"https:\/\/8975-154-113-122-174.eu.ngrok.io\""
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 406,
       "length": 17,
       "value": "\"\/sdk\/initialize\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 322,
+      "offset": 459,
+      "length": 20,
+      "value": "\"\/v1\/sdk\/initialize\""
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 516,
       "length": 19,
       "value": "\"\/v1\/sdk\/products\/\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 378,
+      "offset": 572,
       "length": 23,
       "value": "\"\/v1\/sdk\/verifications\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 438,
+      "offset": 632,
       "length": 34,
       "value": "\"\/v1\/sdk\/biometrics\/session-token\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 699,
       "length": 17,
       "value": "\"\/v1\/ng\/verifind\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 557,
+      "offset": 751,
       "length": 20,
       "value": "\"\/v1\/ng\/verifind\/4d\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 604,
+      "offset": 798,
       "length": 19,
       "value": "\"\/v1\/sdk\/workflows\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 657,
+      "offset": 851,
       "length": 36,
       "value": "\"\/v1\/ng\/verifind\/4d\/tracking-submit\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 761,
+      "offset": 955,
       "length": 39,
       "value": "\"https:\/\/dev-qoreidsdk-be.verifynow.ng\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 837,
+      "offset": 1034,
+      "length": 41,
+      "value": "\"https:\/\/stage-qoreidsdk-be.verifynow.ng\""
+    },
+    {
+      "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1112,
       "length": 33,
       "value": "\"https:\/\/qoreidsdk-be.qoreid.com\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 901,
+      "offset": 1176,
       "length": 20,
       "value": "\"\/api\/v1\/exceptions\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 946,
+      "offset": 1221,
       "length": 16,
       "value": "\"\/api\/v1\/linkup\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 992,
+      "offset": 1267,
       "length": 20,
       "value": "\"\/api\/v1\/api-errors\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/infrastructure\/network\/ApiConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1042,
+      "offset": 1317,
       "length": 20,
       "value": "\"\/api\/v1\/sdk-events\""
     },
@@ -45226,7 +45331,7 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/qoreidinit\/ApiResponseWrapper.swift",
       "kind": "StringLiteral",
-      "offset": 9504,
+      "offset": 10167,
       "length": 2,
       "value": "\"\""
     },
@@ -45240,28 +45345,28 @@
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/qoreidinit\/QoreIdViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4333,
+      "offset": 5159,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/qoreidinit\/QoreIdViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 13886,
+      "offset": 14712,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/qoreidinit\/QoreIdViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 18959,
+      "offset": 19785,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/oluwapelumisamson\/Desktop\/Production\/qoreid-sdk-ios\/QoreIDSDK\/coremodule\/qoreidinit\/QoreIdViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 18978,
+      "offset": 19804,
       "length": 2,
       "value": "\"\""
     },
