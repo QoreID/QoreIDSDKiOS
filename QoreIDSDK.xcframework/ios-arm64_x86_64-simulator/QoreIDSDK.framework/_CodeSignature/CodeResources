@@ -4,9 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Camera.png</key>
+		<data>
+		/QqXkHUGgchkwHbo/o2moEagAJA=
+		</data>
+		<key>File_Send.png</key>
+		<data>
+		Vo/9UhaGFnnzp34KHhgbXVsNE8U=
+		</data>
 		<key>Headers/QoreIDSDK-Swift.h</key>
 		<data>
-		tZMUrsAV2yvR1x0oi3QyGsv/ftc=
+		TZ1glRoAjhqA9D5EhU9LrUzCgyQ=
 		</data>
 		<key>Headers/QoreIDSDk.h</key>
 		<data>
@@ -62,51 +70,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nxi68vT42W3jBXzcKJmM/Z5AVYY=
+		8Dp5UV41g5gV4wWArt42T0q+lAY=
+		</data>
+		<key>Map_pin.png</key>
+		<data>
+		2v4RuCN6qfnMVMQ6l9KPcwA3oCk=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		hWb9GKObFWwfB2THl3b2SH6PPY8=
+		PgH7dTV6YdtN5aEL/UaeVEVO078=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		xmXYkX6k3JYlOY8uJ/9SG80xs6k=
+		7UMmn2Lb2R+auEj8feQ0Mo4Syi0=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		teQKtVJH2StBYH/dRpYxjMfreQE=
+		PvFnsPTkYnp/Y1xSG1CjRvz1Mbk=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		xmXYkX6k3JYlOY8uJ/9SG80xs6k=
+		7UMmn2Lb2R+auEj8feQ0Mo4Syi0=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		c/rX050U0TUyg+oeYx5NlGDnvG0=
+		NHwtowSEFKPH8QC8EtBjW/MgJJE=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hWb9GKObFWwfB2THl3b2SH6PPY8=
+		PgH7dTV6YdtN5aEL/UaeVEVO078=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		N9ZIhtpr5VDpjtenlmRZOhoEFFM=
+		TH5HH5a4aBw+wWTaFuV6EyoPkzg=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		zXETVL8hMsQpfVjFDHmovK15QMU=
+		M3x92GGFt67ekpG5Zc1pgyKNrC8=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		N9ZIhtpr5VDpjtenlmRZOhoEFFM=
+		TH5HH5a4aBw+wWTaFuV6EyoPkzg=
 		</data>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		78m+3xfQtlw4OZ72wuQ0sSonmNg=
+		cuq9wl8MscNjsoeSUPKeV9Z028Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		49lhUpbuhSblELYmSO6Q42OWSFA=
+		ZHRYePWAT92nVmaR+j50OsasZFA=
 		</data>
 		<key>PhoneNumberMetadata.json</key>
 		<data>
@@ -147,6 +159,10 @@
 		<key>address_icon.png</key>
 		<data>
 		E/GhISDlsJi4tcomf7zt601opzA=
+		</data>
+		<key>adress_auto.png</key>
+		<data>
+		WoAWkTpD6CrEEXGHvbuZZ8r9tBw=
 		</data>
 		<key>assets.png</key>
 		<data>
@@ -223,6 +239,10 @@
 		<key>fields.json</key>
 		<data>
 		Jikt3tb0YDP691llG1Nsf4hGnYI=
+		</data>
+		<key>gps.png</key>
+		<data>
+		k/lLXH/G3lbzF2CgD6g0y0UCUsM=
 		</data>
 		<key>livenessLeftArrow.png</key>
 		<data>
@@ -307,11 +327,25 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Camera.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nSBgKimUir/GNlLAtg8EFA33+u8An20AhaHmq9/MmQQ=
+			</data>
+		</dict>
+		<key>File_Send.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			W4lmr4KPcYe2xex8rWtdoHOPqLzfzJvtsja7GeKTOsg=
+			</data>
+		</dict>
 		<key>Headers/QoreIDSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dkSfoEJksomMghof1gJTtfUVdg1103beU2+XYRnlPzo=
+			fNH9tD2vbyL+Jxy+IqEm9YYNYyBAoP4CICcu3bHbQPE=
 			</data>
 		</dict>
 		<key>Headers/QoreIDSDk.h</key>
@@ -405,81 +439,88 @@
 			m79rnLirLiZn4WmctT/9z0lWHclWmGDDwxx1DYyi7UM=
 			</data>
 		</dict>
+		<key>Map_pin.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dEmQmW46PWNexeTIJgrVomUvpTLni8eoA0Jmiw6MxV4=
+			</data>
+		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g/RGQv97nedR5H4R6+VxM/K1fY3BQzBAKkGm6nMRSMU=
+			lnKm4ugVDXSwoSAXva3c+j26hhBqnRtCv/YXRpF2wQU=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			72QeaIa/OJ8jy8bBg581ty9IaSHkyyUQFnfMkHM0wBE=
+			tVL+yRTqjX86MiGF90TPhzFOKi3JSalKN6nzQYroTMc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YMBziSgUIrNMbdjBeBIPkr+6+AQd5aadJGeuZC6cBUs=
+			nEG2ZAz7OSQPz6NsOjJmVayg9Ugz+/NbgBslknI0zts=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			72QeaIa/OJ8jy8bBg581ty9IaSHkyyUQFnfMkHM0wBE=
+			tVL+yRTqjX86MiGF90TPhzFOKi3JSalKN6nzQYroTMc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mS2jLf1nL+J0HL+2TRHz/X+uE/9MuRI4b3wymz1VznQ=
+			vrRvjnPbC28ZASyTMKSHjyzxfi7un3Ollm8znrIfBSs=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g/RGQv97nedR5H4R6+VxM/K1fY3BQzBAKkGm6nMRSMU=
+			lnKm4ugVDXSwoSAXva3c+j26hhBqnRtCv/YXRpF2wQU=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ThnqwE3mC4OCsZGLPdJIAe4ZbGW+KYBMgUvEJDnZ7gY=
+			nZlVi0BWMwtifGkkRfV5rZmGxJFLjmcKwJ3COKWWQFA=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQrBEXOBav6br9dVJ59aE0Tf1YCIrr7CQbqFBDdkpBM=
+			kMd6Oyc8RrDJ9wVqs2PXmlFSGFzfhf67MfQuewV+Ptc=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ThnqwE3mC4OCsZGLPdJIAe4ZbGW+KYBMgUvEJDnZ7gY=
+			nZlVi0BWMwtifGkkRfV5rZmGxJFLjmcKwJ3COKWWQFA=
 			</data>
 		</dict>
 		<key>Modules/QoreIDSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2oaX1HPq0v0gqwS8EstVj7/XyfUfIIhu/djQF19OKhw=
+			gUgFqTBMIX4y0iAwwvhdrwx3QwAAOhdSUShUQs/36zk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C2/7nHMB8Qon2luAfEDwJMj/xld2Psit2Q4MPd+Ycb8=
+			ufCFjehJiikaisbTRZB18s1WYM7t14rnCght8L+uf4w=
 			</data>
 		</dict>
 		<key>PhoneNumberMetadata.json</key>
@@ -550,6 +591,13 @@
 			<key>hash2</key>
 			<data>
 			IZ8s566ey9I/6wUEiHmj8RJ/eZdYetvONq/RMPG5/iQ=
+			</data>
+		</dict>
+		<key>adress_auto.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+KvkIuF6rdHStBJBPs0+04jH8UArXRWECdGoIqwbM6o=
 			</data>
 		</dict>
 		<key>assets.png</key>
@@ -683,6 +731,13 @@
 			<key>hash2</key>
 			<data>
 			E/F+ByeRPQC7RD5G5lu11wvS1VexldNlyb7sqFVcgAM=
+			</data>
+		</dict>
+		<key>gps.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			csxEOrxm/t3yLS4Ubfh0oBl33wcFcTktkID1HiNxQqQ=
 			</data>
 		</dict>
 		<key>livenessLeftArrow.png</key>

@@ -7,5 +7,4 @@ framework module QoreIDSDK {
 
 module QoreIDSDK.Swift {
   header "QoreIDSDK-Swift.h"
-  requires objc
 }
