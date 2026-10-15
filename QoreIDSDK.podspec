@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'QoreIDSDK'
-    s.version           = '2.0.2'
+    s.version           = '2.0.3'
     s.summary           = 'QoreIDSDK iOS verify me library'
     s.homepage          = 'https://github.com/QoreID/QoreIDSdkiOS'
 
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
     s.platform          = :ios
     s.source       = { :git => "https://github.com/QoreID/QoreIDSdkiOS.git", :tag => "#{s.version}" }
-    s.ios.deployment_target = '12.0'
+    s.ios.deployment_target = '15.0'
     s.ios.vendored_frameworks = 'QoreIDSDK.xcframework'
     s.dependency 'QoreIDSDKDependencies'
 end
